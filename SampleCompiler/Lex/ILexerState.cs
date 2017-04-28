@@ -10,6 +10,8 @@ namespace SampleCompiler.Lex
             
         ILexerState Act();
 
+        ILexerState Trim();
+
         bool TokenComplete { get; }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class LexerStateFactory : ILexerStateFactory
     {
-        public ILexerState CreateInitialState(IForwardReadSequence<char> sequence) => new InitialLexerState(sequence, null);
+        public ILexerState CreateInitialState(IForwardReadSequence<char> sequence, IParserSet parsers) => new InitialLexerState(sequence, null, parsers);
 
-        public ILexerState CreateTailToken(IForwardReadSequence<char> sequence, ILexerState state) => new InitialLexerState(sequence, (LexerStateBase)state);
+        public ILexerState CreateTailToken(IForwardReadSequence<char> sequence, ILexerState state, IParserSet parsers) => new InitialLexerState(sequence, (LexerStateBase)state, parsers);
     }
 }

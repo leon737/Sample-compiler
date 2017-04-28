@@ -49,8 +49,17 @@
     <Compile Include="Lex\ILexerState.cs" />
     <Compile Include="Lex\ILexerStateFactory.cs" />
     <Compile Include="Lex\Impl\ForwardReadSequence.cs" />
+    <Compile Include="Lex\Impl\InitialLexerState.cs" />
+    <Compile Include="Lex\Impl\KeywordParser.cs" />
     <Compile Include="Lex\Impl\Lexer.cs" />
+    <Compile Include="Lex\Impl\NumberLexerState.cs" />
+    <Compile Include="Lex\Impl\ParserBase.cs" />
     <Compile Include="Lex\Impl\SequenceProvider.cs" />
+    <Compile Include="Lex\Impl\SpecialSymbolLexerState.cs" />
+    <Compile Include="Lex\Impl\SymbolLexerState.cs" />
+    <Compile Include="Lex\Impl\SymbolParser.cs" />
+    <Compile Include="Lex\IParser.cs" />
+    <Compile Include="Lex\IParserSet.cs" />
     <Compile Include="Lex\ISequenceProvider.cs" />
     <Compile Include="Lex\Impl\LexerStateFactory.cs" />
     <Compile Include="Lex\Impl\LexerStateBase.cs" />
@@ -63,6 +72,8 @@
     <Compile Include="Lex\Models\Symbols.cs" />
     <Compile Include="Lex\Models\SymbolToken.cs" />
     <Compile Include="Lex\Models\Token.cs" />
+    <Compile Include="Lex\Impl\OperatorParser.cs" />
+    <Compile Include="Lex\Impl\ParserSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

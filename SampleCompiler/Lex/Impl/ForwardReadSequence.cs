@@ -21,14 +21,5 @@ namespace SampleCompiler.Lex.Impl
         public bool HasNext() => _index < _length;
 
         public T Next() => _list[_index++];
-
-
-        public T LookAhead(T c)
-        {
-            if (!HasNext()) return default(T);
-            var v = _list[_index];
-            if (c.Equals(v)) _index++;
-            return v;
-        }
     }
 }

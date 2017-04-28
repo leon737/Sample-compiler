@@ -2,14 +2,11 @@
 
 namespace SampleCompiler.Lex
 {
-    public interface IForwardReadSequence<T>
+    public interface IForwardReadSequence<out T>
         where T: IEquatable<T>
     {
         bool HasNext();
 
         T Next();
-
-        T LookAhead(T c);
-        
     }
 }
