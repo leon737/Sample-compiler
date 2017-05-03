@@ -19,6 +19,7 @@ namespace SampleCompiler.Lex.Impl
             .With("||", Operators.LogicalOr)
             .With("*", Operators.Multiply)
             .With("/", Operators.Divide)
+            .With("%", Operators.Remainder)
             .With("+", Operators.Plus)
             .With("-", Operators.Minus)
             .Else(Maybe<Operators>.Nothing)

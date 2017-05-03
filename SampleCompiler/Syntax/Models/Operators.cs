@@ -1,8 +1,7 @@
-﻿namespace SampleCompiler.Lex.Models
+﻿namespace SampleCompiler.Syntax.Models
 {
     public enum Operators
     {
-        Assignment,
         LessThan,
         LessOrEqual,
         Equals,

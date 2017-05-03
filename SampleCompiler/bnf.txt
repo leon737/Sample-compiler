@@ -1,0 +1,54 @@
+﻿<translation-unit> ::= {<declaration>}* {<statement>}*
+
+<declaration> ::=  var <declarator> ;
+
+<declarator> ::= <identifier>
+				| <identifier> = <expression>
+
+<logical-or-expression> ::= <logical-and-expression>
+                          | <logical-or-expression || <logical-and-expression>
+
+<logical-and-expression> ::= <equality-expression>
+                           | <logical-and-expression && <equality-expression>
+
+<equality-expression> ::= <relational-expression>
+                        | <equality-expression> == <relational-expression>
+                        | <equality-expression> != <relational-expression>
+
+<relational-expression> ::= <additive-expression>
+                          | <relational-expression> < <additive-expression>
+                          | <relational-expression> > <additive-expression>
+                          | <relational-expression> <= <additive-expression>
+                          | <relational-expression> >= <additive-expression>
+
+<additive-expression> ::= <multiplicative-expression>
+                        | <additive-expression> + <multiplicative-expression>
+                        | <additive-expression> - <multiplicative-expression>
+
+<multiplicative-expression> ::= <multiplicative-expression> * <primary-expression>
+                              | <multiplicative-expression> / <primary-expression>
+                              | <multiplicative-expression> % <primary-expression>
+
+<primary-expression> ::= <identifier>
+                       | <integer-constant>                      
+                       | ( <expression> )
+
+<expression> ::= <logical-or-expression>
+					| <identifier> = <expression>
+
+<compound-statement> ::= { {<declaration>}* {<statement>}* }
+
+<statement> ::= <expression-statement>
+              | <compound-statement>
+              | <selection-statement>
+              | <iteration-statement>
+			  | <return-statement>
+
+<expression-statement> ::= {<expression>}? ;
+
+<selection-statement> ::= if ( <expression> ) <statement>
+                        | if ( <expression> ) <statement> else <statement>                        
+
+<iteration-statement> ::= while ( <expression> ) <statement>
+
+<return-statement> ::= return <expression> ;

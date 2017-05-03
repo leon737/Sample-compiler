@@ -10,6 +10,7 @@ namespace SampleCompiler.Lex.Impl
             value.Match()
                 .With("return", Keywords.Return.ToMaybe())
                 .With("if", Keywords.If)
+                .With("else", Keywords.Else)
                 .With("while", Keywords.While)
                 .With("var", Keywords.Var)
                 .Else(Maybe<Keywords>.Nothing)

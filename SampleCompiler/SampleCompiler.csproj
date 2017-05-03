@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\InfiniteSequence.cs" />
     <Compile Include="Lex\IForwardReadSequence.cs" />
     <Compile Include="Lex\ILexer.cs" />
     <Compile Include="Lex\ILexerState.cs" />
@@ -75,11 +76,41 @@
     <Compile Include="Lex\Impl\OperatorParser.cs" />
     <Compile Include="Lex\Impl\ParserSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntax\Composers\ComposeResult.cs" />
+    <Compile Include="Syntax\Composers\Impl\ComposerBase.cs" />
+    <Compile Include="Syntax\Impl\ComposerFactory.cs" />
+    <Compile Include="Syntax\Composers\IComposer.cs" />
+    <Compile Include="Syntax\Composers\ITranslationUnitComposer.cs" />
+    <Compile Include="Syntax\Composers\Impl\TranslationUnitComposer.cs" />
+    <Compile Include="Syntax\IComposerFactory.cs" />
+    <Compile Include="Syntax\ISyntaxTranslator.cs" />
+    <Compile Include="Syntax\Models\AdditiveExpression.cs" />
+    <Compile Include="Syntax\Models\CompoundStatement.cs" />
+    <Compile Include="Syntax\Models\Declaration.cs" />
+    <Compile Include="Syntax\Models\Declarator.cs" />
+    <Compile Include="Syntax\Models\EqualityExpression.cs" />
+    <Compile Include="Syntax\Models\Expression.cs" />
+    <Compile Include="Syntax\Models\ExpressionStatement.cs" />
+    <Compile Include="Syntax\Models\Identifier.cs" />
+    <Compile Include="Syntax\Models\IterationStatement.cs" />
+    <Compile Include="Syntax\Models\LogicalAndExpression.cs" />
+    <Compile Include="Syntax\Models\LogicalOrExpression.cs" />
+    <Compile Include="Syntax\Models\MultiplicativeExpression.cs" />
+    <Compile Include="Syntax\Models\Operators.cs" />
+    <Compile Include="Syntax\Models\PrimaryExpression.cs" />
+    <Compile Include="Syntax\Models\RelationExpression.cs" />
+    <Compile Include="Syntax\Models\ReturnStatement.cs" />
+    <Compile Include="Syntax\Models\SelectionStatement.cs" />
+    <Compile Include="Syntax\Models\Statement.cs" />
+    <Compile Include="Syntax\Models\TranslationUnit.cs" />
+    <Compile Include="Syntax\Impl\SyntaxTranslator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="bnf.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
